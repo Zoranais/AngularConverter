@@ -17,7 +17,7 @@ export class ExchangeRatesService {
   }
 
   public convertFromTo(from: string, to: string, rates: Currency[]){
-    if(from === CurrencyCodes.UAH){
+    if(from === CurrencyCodes.UAH){      
       const rate = rates.filter(x => x.cc === to);
       return rate.length > 0 ? rate[0].rate : 0;
     }
@@ -29,7 +29,7 @@ export class ExchangeRatesService {
         return 0;
       }
 
-      return fromRate / toRate;
+      return toRate / fromRate;
     }
     
   }
