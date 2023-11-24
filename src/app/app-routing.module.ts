@@ -4,13 +4,13 @@ import { ConverterComponent } from './components/converter/converter.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component: ConverterComponent    
-  }
+    path: '',
+    component: ConverterComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

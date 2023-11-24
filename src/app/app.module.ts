@@ -14,11 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    ConverterComponent,
-  ],
+  declarations: [AppComponent, HeaderComponent, ConverterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,9 +24,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatInputModule,
     ReactiveFormsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

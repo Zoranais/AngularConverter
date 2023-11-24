@@ -1,31 +1,43 @@
 <div class="container">
-    <form *ngIf="form" [formGroup]="form" class="inputs">
-        <div formGroupName="from" class="input">
-            <mat-form-field>
-                <mat-label>Currency</mat-label>
-                <mat-select [formControlName]="'cc'" (selectionChange)="onFromChanged()">
-                    <mat-option *ngFor="let currency of rates" [value]="currency.cc">{{currency.cc}}</mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Value</mat-label>
-                <input formControlName="value" type="number" matInput (input)="onFromChanged()">
-            </mat-form-field>                
-        </div>
-        <button mat-icon-button color="black" (click)="reverse()">
-            <mat-icon fontIcon="compare_arrows"></mat-icon>
-        </button>
-        <div formGroupName="to" class="input">
-            <mat-form-field>
-                <mat-label>Currency</mat-label>
-                <mat-select [formControlName]="'cc'" (selectionChange)="onToChanged()">
-                    <mat-option *ngFor="let currency of rates" [value]="currency.cc">{{currency.cc}}</mat-option>
-                </mat-select>
-            </mat-form-field>
-            <mat-form-field (input)="onToChanged()">
-                <mat-label>Value</mat-label>
-                <input formControlName="value" type="number" matInput>
-            </mat-form-field>                
-        </div>
-    </form>
+  <form *ngIf="form" [formGroup]="form" class="inputs">
+    <div formGroupName="from" class="input">
+      <mat-form-field>
+        <mat-label>Currency</mat-label>
+        <mat-select
+          [formControlName]="'cc'"
+          (selectionChange)="onFromChanged()"
+        >
+          <mat-option *ngFor="let currency of rates" [value]="currency.cc">{{
+            currency.cc
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Value</mat-label>
+        <input
+          formControlName="value"
+          type="number"
+          matInput
+          (input)="onFromChanged()"
+        />
+      </mat-form-field>
+    </div>
+    <button mat-icon-button color="black" (click)="reverse()">
+      <mat-icon fontIcon="compare_arrows"></mat-icon>
+    </button>
+    <div formGroupName="to" class="input">
+      <mat-form-field>
+        <mat-label>Currency</mat-label>
+        <mat-select [formControlName]="'cc'" (selectionChange)="onToChanged()">
+          <mat-option *ngFor="let currency of rates" [value]="currency.cc">{{
+            currency.cc
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field (input)="onToChanged()">
+        <mat-label>Value</mat-label>
+        <input formControlName="value" type="number" matInput />
+      </mat-form-field>
+    </div>
+  </form>
 </div>
