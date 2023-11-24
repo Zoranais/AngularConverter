@@ -1,3 +1,3 @@
 export const environment = {
-    apiUrl: 'https:\\api.frankfurter.app'
+    apiUrl: 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json'
 };
