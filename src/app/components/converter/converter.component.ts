@@ -44,6 +44,25 @@ export class ConverterComponent implements OnDestroy {
     this.form?.patchValue({from:{value: (fromValue / rate).toFixed(3)}});
   }
 
+  public reverse() {
+    const fromCode = this.form?.get('from.cc')?.value;
+    const toCode = this.form?.get('to.cc')?.value;
+    const fromValue = this.form?.get('from.value')?.value;
+    const toValue = this.form?.get('to.value')?.value;
+
+    this.form?.patchValue(
+      {
+        from: {
+          cc: toCode,
+          value: toValue
+        },
+        to: {
+          cc: fromCode,
+          value: fromValue
+        }
+      })
+  }
+
   ngOnDestroy(){
     this.unsubscribe$.next();
     this.unsubscribe$.complete();

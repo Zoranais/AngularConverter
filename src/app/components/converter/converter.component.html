@@ -12,6 +12,9 @@
                 <input formControlName="value" type="number" matInput (input)="onFromChanged()">
             </mat-form-field>                
         </div>
+        <button mat-icon-button color="black" (click)="reverse()">
+            <mat-icon fontIcon="compare_arrows"></mat-icon>
+        </button>
         <div formGroupName="to" class="input">
             <mat-form-field>
                 <mat-label>Currency</mat-label>
